@@ -1,1 +1,6 @@
 theme: jekyll-theme-slate
+
+title: Hexxing Hunt
+description: Hexxing Hunt is a top down hide and seek style game. It's free, so give it a try!
+
+show_downloads: true
