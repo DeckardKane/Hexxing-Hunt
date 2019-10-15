@@ -1,0 +1,12 @@
+{% assign featuredcount = '0' %}
+{%- for post in site.posts -%}
+
+  {% if post.featured %}
+  {% include archive-single.html %}
+    {% assign featuredcount = featuredcount | plus:'1' %}
+  {% endif %}
+{%- endfor -%}
+
+{% if featuredcount == '0' %}
+  <h1>No posts have been featured yet</h1>
+{% endif %}

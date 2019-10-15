@@ -1,0 +1,17 @@
+main:
+  #- title: "Post Archive"
+  #  url: /posts/
+  #- title: "Categories"
+  #  url: /categories/
+  #- title: "Tags"
+  #  url: /tags/
+  - title: "About"
+    url: /#what-is-this
+  - title: "Download"
+    url: https://github.com/DeckardKane/Hexxing-Hunt/releases
+  - title: "Trailer"
+    url: /#gameplay-trailer
+  - title: "Screenshots"
+    url: /#gameplay-screenshots
+  - title: "Playtest Photos"
+    url: /#playtest-photos

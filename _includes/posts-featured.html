@@ -1,0 +1,5 @@
+{%- for post in site.posts -%}
+  {% if post.featured %}
+    {% include archive-single.html %}
+  {% endif %}
+{%- endfor -%}
