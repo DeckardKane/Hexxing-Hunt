@@ -62,12 +62,12 @@ public class WitchBehavior : MonoBehaviour
             if (rb2d.velocity.x < 0 && propNumber == 0)
             {
                 spriteRenderer.flipX = true;
-                anim.Play("Witch_walkRight");
+                anim.Play("walkRight");
             }
             else if (rb2d.velocity.x > 0 && propNumber == 0)
             {
                 spriteRenderer.flipX = false;
-                anim.Play("Witch_walkRight");
+                anim.Play("walkRight");
             }
 
         }
