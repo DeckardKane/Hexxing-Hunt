@@ -190,12 +190,12 @@ PrefabInstance:
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 354.6
+      value: 383
       objectReference: {fileID: 0}
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -207.7
+      value: -293.00006
       objectReference: {fileID: 0}
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
@@ -368,7 +368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352172219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -2.04, z: 0}
+  m_LocalPosition: {x: -4.04, y: -2.04, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -448,7 +448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748384314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.13, y: 0.78, z: 0}
+  m_LocalPosition: {x: -4.04, y: 0.94, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -521,8 +521,8 @@ Canvas:
   m_GameObject: {fileID: 1011527391}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 2144628367}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -631,7 +631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061917277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.13, y: 0.78, z: 0}
+  m_LocalPosition: {x: 4.04, y: 0.94, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -707,12 +707,12 @@ PrefabInstance:
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -329.5
+      value: -385
       objectReference: {fileID: 0}
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -75.2
+      value: -87.39996
       objectReference: {fileID: 0}
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
@@ -841,7 +841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510669052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6, y: -2.04, z: 0}
+  m_LocalPosition: {x: 4.36, y: -2.04, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -917,12 +917,12 @@ PrefabInstance:
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 354.6
+      value: 383
       objectReference: {fileID: 0}
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -87.4
+      value: -87.39996
       objectReference: {fileID: 0}
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
@@ -1047,12 +1047,12 @@ PrefabInstance:
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -340.2
+      value: -385
       objectReference: {fileID: 0}
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -207.7
+      value: -293.00006
       objectReference: {fileID: 0}
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
@@ -1209,7 +1209,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.09505162, g: 0.14613742, b: 0.2264151, a: 0}
+  m_BackGroundColor: {r: 0.08548417, g: 0.11411982, b: 0.16037738, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1331,7 +1331,7 @@ PrefabInstance:
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 68.399994
+      value: 120.84
       objectReference: {fileID: 0}
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
