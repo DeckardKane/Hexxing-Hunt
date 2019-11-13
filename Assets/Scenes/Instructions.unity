@@ -250,50 +250,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 46592064}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &172400286
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 172400288}
-  - component: {fileID: 172400287}
-  m_Layer: 0
-  m_Name: InputListener
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &172400287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172400286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56130c6fe350744668f166031090a6ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Play
---- !u!4 &172400288
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172400286}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 645.4018, y: 536.4918, z: -50.58899}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &352172219
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,7 +328,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &748384314
 GameObject:
@@ -452,7 +408,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1011527391
 GameObject:
@@ -635,7 +591,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1192886940
 PrefabInstance:
@@ -707,7 +663,7 @@ PrefabInstance:
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -385
+      value: -400
       objectReference: {fileID: 0}
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
@@ -722,7 +678,7 @@ PrefabInstance:
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 41.899994
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2433411259396292815, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
@@ -757,7 +713,9 @@ PrefabInstance:
     - target: {fileID: 8648367324367887733, guid: 580323e0a6e5ea044a59fbc174ab0988,
         type: 3}
       propertyPath: m_Text
-      value: Right Shift to point out witch!
+      value: 'Right Shift to point out witch!
+
+        Be careful, wrong guesses will run down the clock! Tick tock!'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 580323e0a6e5ea044a59fbc174ab0988, type: 3}
@@ -845,7 +803,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2030779733
 PrefabInstance:
@@ -1118,6 +1076,7 @@ GameObject:
   - component: {fileID: 2122489386}
   - component: {fileID: 2122489385}
   - component: {fileID: 2122489384}
+  - component: {fileID: 2122489387}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1173,6 +1132,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2122489387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122489383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56130c6fe350744668f166031090a6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Play
+  delayLeft: 2
+  timeOut: 1
+  timeLeft: 10
+  timeOutAltScene: 1
+  timeOutSceneName: StartScreen
 --- !u!1 &2144628365
 GameObject:
   m_ObjectHideFlags: 0
