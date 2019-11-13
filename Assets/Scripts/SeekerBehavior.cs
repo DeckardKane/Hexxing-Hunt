@@ -2,24 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Rewired;
 
 public class SeekerBehavior : MonoBehaviour
 {
+
+    public int playerId = 1;
+    private Player player; // The Rewired Player
+    private bool fire;
+
     Animator anim;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb2d;
     public GameObject player1;
     public GameObject player2; //unnecessary?
 
-    private int shiftUses;
-    public string sceneName;
     bool hitWitch = false;
-    public bool noShiftUses;
-    public bool foundWitch = false;
+
+    public MyScriptable gameStatus;
+    public MyScriptable timer;
+    public float shiftPenalty;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = ReInput.players.GetPlayer(playerId);
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>(); // we are accessing the SpriteRenderer that is attached to the Gameobject
         rb2d = GetComponent<Rigidbody2D>();
@@ -49,22 +56,44 @@ public class SeekerBehavior : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.RightShift) && hitWitch == true) // If right shift is pushed down AND we are colliding with the witch
+        GetInput();
+        ProcessInput();
+
+    }
+
+    private void GetInput()
+    {
+        // Get the input from the Rewired Player. All controllers that the Player owns will contribute, so it doesn't matter
+        // whether the input is coming from a joystick, the keyboard, mouse, or a custom controller.
+        fire = player.GetButtonDown("Fire");
+    }
+
+    private void ProcessInput()
+    {
+        // Process fire
+        if (fire && hitWitch == true)
         {
-            foundWitch = true;
+            gameStatus.Value = 2;
             print("You found the witch! You win!");
-        } else if (Input.GetKeyDown(KeyCode.RightShift))
+        } else if (fire && hitWitch != true)
         {
-            shiftUses++;
-            if(shiftUses > 3f) // why is it 3f (f is for floats) if we're using an int for shiftUses?
-            {
-                noShiftUses = true; 
-                SceneManager.LoadScene(sceneName);
-            }
+            // What if we made it so the timer decreased every time the hunter used the "declare witch" button?
+            timer.Value = timer.Value - shiftPenalty;
             print("That wasn't the witch, dummy");
         }
+        
     }
-    
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject == player1)
+        {
+            print("Hunter is colliding with witch");
+            hitWitch = true;
+        }
+    }
+
+    /*
     // We want to check if player2 has collided with player1's rigidbody. 
     // TO-DO: we could probably condense this to just OnCollisionStay2D?
     void OnCollisionEnter2D(Collision2D collision)
@@ -82,5 +111,5 @@ public class SeekerBehavior : MonoBehaviour
             hitWitch = false;
         }
     }
-
+    */
 }

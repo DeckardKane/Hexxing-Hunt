@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Rewired;
 
 public class WitchBehavior : MonoBehaviour
 {
+
+    public int playerId = 0;
+    private Player player; // The Rewired Player
+    private bool fire;
 
     Animator anim;
     public AudioSource notaudio;
@@ -31,6 +36,9 @@ public class WitchBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        player = ReInput.players.GetPlayer(playerId);
+
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>(); // we are accessing the SpriteRenderer that is attached to the Gameobject
         rb2d = GetComponent<Rigidbody2D>();
@@ -72,12 +80,25 @@ public class WitchBehavior : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) // If the space bar is pushed down
-        {
-            notaudio.PlayOneShot(audioclip);
-            ChangeAppearance(); // call method to change sprite
-        }
+        GetInput();
+        ProcessInput();
 
+    }
+
+    private void GetInput()
+    {
+        // Get the input from the Rewired Player. All controllers that the Player owns will contribute, so it doesn't matter
+        // whether the input is coming from a joystick, the keyboard, mouse, or a custom controller.
+        fire = player.GetButtonDown("Fire");
+    }
+
+    private void ProcessInput()
+    {
+        // Process fire
+        if (fire)
+        {
+            ChangeAppearance();
+        }
     }
 
     void ChangeAppearance()
